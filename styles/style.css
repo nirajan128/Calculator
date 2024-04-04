@@ -1,0 +1,20 @@
+
+
+@media screen and (min-width: 1024px){
+    .custom-container{
+        width: 50%;
+    }
+}
+
+@media screen and (min-device-width: 768px) 
+    and (max-device-width: 1024px){
+        .custom-container{
+            width: 60%;
+        }
+    }
+    @media screen
+    and (max-device-width: 640px){
+        .custom-container{
+            width: 80%;
+        }
+    }
