@@ -1,0 +1,11 @@
+{
+  "name": "calculator",
+  "version": "1.0.0",
+  "description": "A calculator that performs basic math operations and converts the result to Binary, Hexadecimal, and Octal values",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Nirajan",
+  "license": "ISC"
+}
