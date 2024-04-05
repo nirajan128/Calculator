@@ -14,13 +14,50 @@
             <div class="mode"><h1>mode</h1></div>        
         </div>
     </nav>
-    <main class=" d-flex justify-content-center mt-3">
-        <div class="container bg-dark shadow p-3 custom-container "> 
-            <input type="text" class="form-control" id="Results" placeholder="0">
+    <main class=" d-flex flex-column justify-content-center mt-3">
+        <div class="container d-grid  column-gap-1 bg-dark shadow p-3 custom-container" > 
+            <input type="text" class="form-control custom-input" id="Results" placeholder="0">
+            <div class="row text-light column-gap-3 rows">
+                <div class="col column"><button type="button" id="c_btn" class="btn btn-secondary calcBtn">7</button></div>
+                <div class="col column"><button type="button" id="c_btn" class="btn btn-secondary calcBtn">8</button></div>
+                <div class="col column"><button type="button" id="c_btn" class="btn btn-secondary calcBtn">9</button></div>
+                <div class="col column"><button type="button" id="c_btn" class="btn btn-secondary calcBtn expression">/</button></div>
+            </div>
+            <div class="row text-light column-gap-3 rows">
+                <div class="col column"><button type="button" id="c_btn" class="btn btn-secondary calcBtn">4</button></div>
+                <div class="col column"><button type="button" id="c_btn" class="btn btn-secondary calcBtn">5</button></div>
+                <div class="col column"><button type="button" id="c_btn" class="btn btn-secondary calcBtn">6</button></div>
+                <div class="col column"><button type="button" id="c_btn" class="btn btn-secondary calcBtn expression">*</button></div>
+            </div>
+            <div class="row text-light column-gap-3 rows">
+                <div class="col column"><button type="button" id="c_btn" class="btn btn-secondary calcBtn">1</button></div>
+                <div class="col column"><button type="button" id="c_btn" class="btn btn-secondary calcBtn">2</button></div>
+                <div class="col column"><button type="button" id="c_btn" class="btn btn-secondary calcBtn">3</button></div>
+                <div class="col column"><button type="button" id="c_btn" class="btn btn-secondary calcBtn expression">+</button></div>
+            </div>
+            <div class="row text-light column-gap-3 rows">
+                <div class="col column"><button type="button" id="c_btn" class="btn btn-secondary calcBtn">0</button></div>
+                <div class="col column"><button type="button" id="c_btn" class="btn btn-secondary calcBtn">.</button></div>
+                <div class="col column"><button type="button" id="c_btn" class="btn btn-secondary calcBtn">DEL</button></div>
+                <div class="col column"><button type="button" id="c_btn" class="btn btn-secondary calcBtn expression">-</button></div>
+            </div>
+            <div class="row text-light column-gap-3 rows">
+                <div class="col column">
+                    <button type="button" id="c_btn" class="btn btn-secondary calcBtn expression">AC</button>
+                </div>
+                <div class="col column">
+                    <button type="button" id="c_btn" class="btn btn-secondary calcBtn expression">=</button>
+                </div>
+                
+                
+            </div>
         </div>
+        
     </main>
+   
    
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+<script src="./index.js"></script>
 </body>
 </html>
