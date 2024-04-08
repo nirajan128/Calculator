@@ -10,19 +10,20 @@
 <body class="gradient-background">
     <nav class="navbar shadow">
         <div class="container-fluid p-2 d-flex flex-row justify-content evenly">
-            <div class="logo"><h1 class="orbitron text-light">CALCULATOR</h1></div>
-            <div class="mode"><h1>mode</h1></div>        
+            <div class="logo"><h1 class="orbitron text-light logo">CALCULATOR</h1></div>        
         </div>
     </nav>
     <main>
         
        <div class="container d-grid mt-3">
         <div class="row p-1">
-            <div class="col-lg-3 col-md-2 col-sm-1 d-flex align-items-center bg-dark shadow opacity-75 text-light box mr-1">
-                <h3 class="vt323-regular p-2">This calculator performs basic math operations and converts the results to Binary, Hexadecimal, and Octal Numbers</h3>
-            </div>
-            <div class="col-lg-6 col-md-8 col-sm-7 ">
-                <div class="container d-grid  column-gap-1 bg-dark shadow p-4 custom-container" \> 
+
+        <div class="col-lg-3 col-md-3 col-sm-1 d-flex align-items-center bg-dark shadow opacity-75 text-light box mr-1">
+                <h3 class="vt323-regular p-2 heading">This calculator performs basic math operations and converts the results to Binary, Hexadecimal, and Octal Numbers</h3>
+        </div>
+
+        <div class="col-lg-6 col-md-6 col-sm-7 box ">
+            <div class="container d-grid  column-gap-1 bg-dark shadow p-4 custom-container" \> 
                     <input type="text" class="form-control custom-input" id="Results" placeholder="0">
                     <div class="row text-light column-gap-3 rows">
                         <div class="col column"><button type="button" id="c_btn" class="btn btn-secondary calcBtn">7</button></div>
@@ -58,23 +59,26 @@
                         
                         
                     </div>
-                </div> 
-            </div>
-            <div class="col-lg-3 col-md-2 col-sm-4 box opacity-75 d-flex flex-column justify-content-center align-content-center text-align-center text-light">
-                <div class="results  bg-dark d-flex justify-content-center flex-column shadow">
-                    <h4 class="p-1 orbitron">Binary</h4>
-                    <h4 class="p-1 mt-1 orbitron" id="binary"></h4>
-                </div>
-                <div class="results  bg-dark mt-2  d-flex justify-content-center flex-column shadow">
-                    <h4 class="p-1 orbitron">Hexadecimal </h4>
-                    <h4 class="p-1 mt-1 orbitron" id="hex"></h4>
-                </div>
-                <div class="results  bg-dark mt-2  d-flex justify-content-center flex-column shadow">
-                    <h4 class="p-1 orbitron">Octal</h4>
-                    <h4 class="p-1 mt-1 orbitron" id="oct"></h4>
-                </div>
-            </div>
+        </div> 
         </div>
+
+        <div class="col-lg-3 col-md-3 col-sm-4 box opacity-75 d-flex flex-column justify-content-center align-content-center text-align-center text-light">
+                <div class="results  bg-dark d-flex flex-wrap justify-content-center flex-column shadow">
+                    <h4 class="p-1 orbitron numSystem">Binary</h4>
+                    <h4 class="p-1 mt-1 orbitron numSystem" id="binary"></h4>
+                </div>
+                <div class="results  bg-dark mt-2  d-flex justify-content-center flex-column shadow">
+                    <h4 class="p-1 orbitron numSystem">Hexadecimal </h4>
+                    <h4 class="p-1 mt-1 orbitron numSystem" id="hex"></h4>
+                </div>
+                <div class="results  bg-dark mt-2  d-flex justify-content-center flex-column shadow">
+                    <h4 class="p-1 orbitron numSystem">Octal</h4>
+                    <h4 class="p-1 mt-1 orbitron numSystem" id="oct"></h4>
+                </div>
+        </div>
+
+        </div>
+
        </div>   
     </main>
    
