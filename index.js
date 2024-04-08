@@ -26,9 +26,15 @@ allButton.forEach(button => { //2.for each button in calculator get their value
               try {
                 const finalResult = calculate(fullExp);
                 display.value = finalResult;
+                //show number system results
                 let binary = finalResult.toString(2);
+                document.getElementById("binary").innerText = binary;
+
                 let hexaDecimal = finalResult.toString(16);
+                document.getElementById("hex").innerText = hexaDecimal;
+
                 let octal = finalResult.toString(8);
+                document.getElementById("oct").innerText = octal
                 console.log(binary)
                 console.log(hexaDecimal)
                 console.log(octal)
@@ -39,7 +45,10 @@ allButton.forEach(button => { //2.for each button in calculator get their value
           }
 
           else if (btnValue == "AC"){ //9.if btnvalue is AC set its value to 0
-            display.value = "" 
+            display.value = ""
+            document.getElementById("binary").innerText = "" 
+            document.getElementById("hex").innerText = "" 
+            document.getElementById("oct").innerText = "" 
           }
 
           else{ //10. else convert the btn value to integer and set display value to the integer

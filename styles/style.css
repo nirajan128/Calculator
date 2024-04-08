@@ -2,16 +2,28 @@
 /* For large screen */
 @media screen and (min-width: 1024px){
     .custom-container{
-        width: 50%;
+        width: 80%;
+    }
+
+    .results{
+        height: 10em;
+        width: 100%;
+        text-align: center;
+    }
+
+    .calcBtn{
+        width: 100%;
+        height: auto;
+        font-size: 1.8em ;
     }
 }
 
 /* For MEdium screen */
 @media screen and (min-device-width: 768px) 
     and (max-device-width: 1024px){
-        .custom-container{
+       /*  .custom-container{
             width: 60%;
-        }
+        } */
 
         .calcBtn{
             width: 100%;
@@ -23,16 +35,16 @@
     /* For small screen */
     @media screen
     and (max-device-width: 640px){
-        .custom-container{
+       /*  .custom-container{
             width: 80%;
-        }
+        } */
 
         .calcBtn{
             width: 100%;
         }
     }
 
-    /* Global style */
+    /* Global */
     .custom-input{
         height: 4em;
         text-align: right;
@@ -52,3 +64,26 @@
     background-color: orange;
     color: black;
    }
+   
+
+   .new_cont{
+    width: 90%;
+   }
+
+   .gradient-background {
+    background: linear-gradient(240deg,#e7da21,#7c3ef1,#357b1b,#9723bb);
+    background-size: 240% 240%;
+    animation: gradient-animation 16s ease infinite;
+  }
+  
+  @keyframes gradient-animation {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
