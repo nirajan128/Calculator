@@ -92,7 +92,17 @@
     }
    
 
-     
+   /* Footer */
+   footer{
+    text-align: center;
+   } 
+
+   footer a{
+    text-decoration: none;
+    color: black;
+   }
+
+    /* Gradients */
    .gradient-background {
      background: linear-gradient(240deg,#e7da21,#7c3ef1,#357b1b,#9723bb);
      background-size: 240% 240%;
