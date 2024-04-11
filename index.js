@@ -103,11 +103,6 @@ function calculate(fullExp){
     }
       return result
 }
-
-
-function NumberSystem(){
-
-}
 console.log(allButton)
 
 
