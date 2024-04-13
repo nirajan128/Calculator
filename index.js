@@ -26,12 +26,12 @@ allButton.forEach(button => { //2.for each button in calculator get their value
               try {
                 const finalResult = calculate(fullExp);
                 display.value = finalResult;
-                //show number system results
-                let binary = finalResult.toString(2);
+                //18.show number system results
+                let binary = decimalToBinary(finalResult);
                 document.getElementById("binary").innerText = binary;
 
                 let hexaDecimal = finalResult.toString(16);
-                document.getElementById("hex").innerText = hexaDecimal;
+                document.getElementById("hex").innerText = hexaDecimal.toUpperCase();
 
                 let octal = finalResult.toString(8);
                 document.getElementById("oct").innerText = octal
@@ -59,6 +59,24 @@ allButton.forEach(button => { //2.for each button in calculator get their value
     })
 })
 
+//19. Convert the result to Binary digit and make it so that the fractional part is in 6 places.
+function decimalToBinary(finalResult){
+    let integerPart = Math.floor(finalResult);// gets the integer
+    let fractionalPart = finalResult - integerPart; //gets the fractional part
+    let binaryInteger = integerPart.toString(2); //convert integerpart to binary
+
+    let binaryFractional = "."; //A string that will hold the value of fractional binary after .
+    let count = 0;
+    while (fractionalPart !== 0 && count < 6){
+      fractionalPart*=2; //multiply fractional part with 2, to shict to next digit
+      let bits = Math.floor(fractionalPart) //gets the binary bits of each fractional digit
+      binaryFractional+=bits //appends each binary digit to fractional binary
+      fractionalPart-=bits //removes the integer from fractional part for next iteration ex if fractional part fisrt iteration value is 1.34 bit stores 1 now the sode subtracts 1.34 - 1 whhich is 0.34 now we can use this for next iteration
+      count++ //inrements count each time until it reaches 6
+
+    }
+    return binaryInteger + binaryFractional  //return the value by concactenation integer and binary parts
+}
 
 //12.Make a function that performs math calculation on the expression
 function calculate(fullExp){
@@ -75,7 +93,7 @@ function calculate(fullExp){
         console.log(operand)
         console.log(operator)
         
-
+        //17. Switch case operator to handle math operations
         switch (operator) {
             case "/":
                 result /= operand
