@@ -30,7 +30,7 @@ allButton.forEach(button => { //2.for each button in calculator get their value
                 let binary = decimalToBinary(finalResult);
                 document.getElementById("binary").innerText = binary;
 
-                let hexaDecimal = finalResult.toString(16);
+                let hexaDecimal = decimalToHexa(finalResult);
                 document.getElementById("hex").innerText = hexaDecimal.toUpperCase();
 
                 let octal = finalResult.toString(8);
@@ -77,6 +77,27 @@ function decimalToBinary(finalResult){
     }
     return binaryInteger + binaryFractional  //return the value by concactenation integer and binary parts
 }
+
+
+//20. Hexadecimal function to conver the number and set the fractional part to 6 decimal places
+function decimalToHexa(finalResult){
+  let integerPart = Math.floor(finalResult); //get the integer value on final result in whole number
+  let fractionalPart = finalResult - integerPart;//get the fractional part
+  let hexaInteger = integerPart.toString(16).toUpperCase();//convet the integer part to hexadecimal and change it to uppercase
+  if(fractionalPart!==0){
+    hexaInteger+="."//if fractiona part is not 0 add .
+    for(i=0; i<6; i++){
+      fractionalPart*=16; //Multiply fractional part to  get the next hexadecimal digit
+      let hexBit = Math.floor(fractionalPart); //rounds the fractional part to get single ractional digit
+      hexaInteger+=hexBit.toString(16).toUpperCase(); //adds each hexBit to hexInteger and convert it into hexadecimal
+      fractionalPart-=hexBit; //remove the integer part from fraction for next iteration
+    }
+    return hexaInteger;
+  }
+
+}
+
+
 
 //12.Make a function that performs math calculation on the expression
 function calculate(fullExp){
