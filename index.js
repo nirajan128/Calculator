@@ -28,19 +28,25 @@ allButton.forEach(button => { //2.for each button in calculator get their value
                 display.value = finalResult;
                 //18.show number system results
                 let binary = decimalToBinary(finalResult);
+                console.log(binary)
                 document.getElementById("binary").innerText = binary;
 
                 let hexaDecimal = decimalToHexa(finalResult);
-                document.getElementById("hex").innerText = hexaDecimal.toUpperCase();
-
-                let octal = finalResult.toString(8);
-                document.getElementById("oct").innerText = octal
-                console.log(binary)
                 console.log(hexaDecimal)
+                document.getElementById("hex").innerText = hexaDecimal;
+
+                let octal = decimalToOctal(finalResult);
                 console.log(octal)
+                document.getElementById("oct").innerText = octal
 
               } catch (error) {
-                console.log("error")
+               if(display.value !== btnValue){
+                   display.value = "Invalid syntax";
+                   document.getElementById("binary").innerText = "" 
+                   document.getElementById("hex").innerText = "" 
+                   document.getElementById("oct").innerText = ""
+                   console.log("error")
+               }
               }
           }
 
@@ -52,52 +58,12 @@ allButton.forEach(button => { //2.for each button in calculator get their value
           }
 
           else{ //10. else convert the btn value to integer and set display value to the integer
-            convertNum = parseFloat(btnValue)
+            let convertNum = parseFloat(btnValue)
             display.value+=convertNum
           }
          
     })
 })
-
-//19. Convert the result to Binary digit and make it so that the fractional part is in 6 places.
-function decimalToBinary(finalResult){
-    let integerPart = Math.floor(finalResult);// gets the integer
-    let fractionalPart = finalResult - integerPart; //gets the fractional part
-    let binaryInteger = integerPart.toString(2); //convert integerpart to binary
-
-    let binaryFractional = "."; //A string that will hold the value of fractional binary after .
-    let count = 0;
-    while (fractionalPart !== 0 && count < 6){
-      fractionalPart*=2; //multiply fractional part with 2, to shict to next digit
-      let bits = Math.floor(fractionalPart) //gets the binary bits of each fractional digit
-      binaryFractional+=bits //appends each binary digit to fractional binary
-      fractionalPart-=bits //removes the integer from fractional part for next iteration ex if fractional part fisrt iteration value is 1.34 bit stores 1 now the sode subtracts 1.34 - 1 whhich is 0.34 now we can use this for next iteration
-      count++ //inrements count each time until it reaches 6
-
-    }
-    return binaryInteger + binaryFractional  //return the value by concactenation integer and binary parts
-}
-
-
-//20. Hexadecimal function to conver the number and set the fractional part to 6 decimal places
-function decimalToHexa(finalResult){
-  let integerPart = Math.floor(finalResult); //get the integer value on final result in whole number
-  let fractionalPart = finalResult - integerPart;//get the fractional part
-  let hexaInteger = integerPart.toString(16).toUpperCase();//convet the integer part to hexadecimal and change it to uppercase
-  if(fractionalPart!==0){
-    hexaInteger+="."//if fractiona part is not 0 add .
-    for(i=0; i<6; i++){
-      fractionalPart*=16; //Multiply fractional part to  get the next hexadecimal digit
-      let hexBit = Math.floor(fractionalPart); //rounds the fractional part to get single ractional digit
-      hexaInteger+=hexBit.toString(16).toUpperCase(); //adds each hexBit to hexInteger and convert it into hexadecimal
-      fractionalPart-=hexBit; //remove the integer part from fraction for next iteration
-    }
-    return hexaInteger;
-  }
-
-}
-
-
 
 //12.Make a function that performs math calculation on the expression
 function calculate(fullExp){
@@ -142,6 +108,59 @@ function calculate(fullExp){
     }
       return result
 }
+
+//19. Convert the result to Binary digit and make it so that the fractional part is in 6 places.
+function decimalToBinary(finalResult){
+  let integerPart = Math.floor(finalResult);// gets the integer
+  let fractionalPart = finalResult - integerPart; //gets the fractional part
+  let binaryInteger = integerPart.toString(2); //convert integerpart to binary
+  if(fractionalPart!==0){
+    binaryInteger+="."//if fractional part is not 0 add "."
+    for(i=0; i<6; i++){
+      fractionalPart*=2; //Multiply fractional part to  get the next binary digit
+      let bit = Math.floor(fractionalPart); //rounds the fractional part to get whole fractional digit
+      binaryInteger+=bit.toString(2); //adds each bit to binaryInteger and convert it into binary
+      fractionalPart-=bit; //remove the integer part from fraction for next iteration
+    }
+  } 
+  return binaryInteger 
+}
+
+//20. Hexadecimal function to conver the number and set the fractional part to 6 decimal places
+function decimalToHexa(finalResult){
+let integerPart = Math.floor(finalResult); //get the integer value on final result in whole number
+let fractionalPart = finalResult - integerPart;//get the fractional part
+let hexaInteger = integerPart.toString(16).toUpperCase();//convet the integer part to hexadecimal and change it to uppercase
+if(fractionalPart!==0){
+  hexaInteger+="."//if fractiona part is not 0 add "."
+  for(i=0; i<6; i++){
+    fractionalPart*=16; //Multiply fractional part to  get the next hexadecimal digit
+    let hexBit = Math.floor(fractionalPart); //rounds the fractional part to get whole fractional digit
+    hexaInteger+=hexBit.toString(16).toUpperCase(); //adds each hexBit to hexInteger and convert it into hexadecimal
+    fractionalPart-=hexBit; //remove the integer part from fraction for next iteration
+  }
+}
+return hexaInteger;
+
+}
+
+//21. Octal function to convert result to octal number and set the fractional part to 6decimal places
+function decimalToOctal(finalResult){
+ let integerPart = Math.floor(finalResult);//get the integer value on final result in whole number
+ let fractionalPart = finalResult - integerPart;//get the fractional part
+ let octalInteger = integerPart.toString(8);//convet the integer part to octal number
+ if(fractionalPart!==0){//if fractiona part is not 0 add "."
+  octalInteger+="."
+  for(i=0;i<6;i++){
+     fractionalPart*=8;//Multiply fractional part to  get the next octal digit
+     let octBit = Math.floor(fractionalPart); //rounds the fractional part to get whole fractional digit
+     octalInteger+=octBit.toString(8); //adds each octalBit to octalInteger and convert it into octal digit
+     fractionalPart-=octBit;//remove the integer part from fraction for next iteration
+  }
+ }
+ return octalInteger;
+}
+
 console.log(allButton)
 
 
