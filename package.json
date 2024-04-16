@@ -2,8 +2,19 @@
   "name": "calcu_lator",
   "version": "1.0.0",
   "description": "A calculator that performs basic math operations and converts the result to Binary, Hexadecimal, and Octal values",
-  "main": "index.js",
+  "main": "src/index.js",
   "type": "module",
+  "files": [
+    "src/index.html",
+    "src/style.css",
+    "src/index.js",
+    "LICENSE",
+    "README.md"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nirajan128/Calculator"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
