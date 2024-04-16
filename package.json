@@ -1,6 +1,6 @@
 {
   "name": "@nirajan_/calcula-tor",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A calculator that performs basic math operations and converts the result to Binary, Hexadecimal, and Octal values",
   "main": "src/index.js",
   "type": "module",
@@ -16,7 +16,8 @@
     "url": "git+https://github.com/nirajan128/Calculator.git"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start":  "node src/index.js"
   },
   "author": "Nirajan",
   "license": "MIT"
