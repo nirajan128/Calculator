@@ -1,5 +1,5 @@
 {
-  "name": "calcula-tor",
+  "name": "@nirajan_/calcula-tor",
   "version": "1.0.0",
   "description": "A calculator that performs basic math operations and converts the result to Binary, Hexadecimal, and Octal values",
   "main": "src/index.js",
