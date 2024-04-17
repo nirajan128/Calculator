@@ -20,12 +20,13 @@ Import the CSS files:
 
 Import the JavaScript file:
 
+```
 <script src="node_modules/calculator-app/dist/js/calculator.js"></script>
 
 Add the calculator HTML structure to your file:
 #existing HTML structure
 
-html
+```
 #<div class="container d-grid mt-3">
   <div class="row p-1">
     <div class="col-lg-3 col-md-3 col-sm-1 d-flex align-items-center bg-dark shadow opacity-75 text-light box mr-1">
@@ -40,7 +41,7 @@ html
   </div>
 #</div>
 
-The JavaScript code (`index.js`) utilizes the IDs and classes defined in the HTML to perform calculations and update the display. If you wish to modify the HTML structure or CSS styles, you can do so by editing the existing files. However, please ensure that the JavaScript code remains compatible with the updated HTML structure.
+The JavaScript code (index.js) utilizes the IDs and classes defined in the HTML to perform calculations and update the display. If you wish to modify the HTML structure or CSS styles, you can do so by editing the existing files. However, please ensure that the JavaScript code remains compatible with the updated HTML structure.
 
 If you decide to make changes to the HTML structure, you may need to update the JavaScript code accordingly to ensure proper functionality
 
@@ -48,7 +49,7 @@ Documentation
 -------------
 
 The calculator app consists of the following functions:
-
+```
 `calculate(fullExp)`: This function performs mathematical calculations on the given expression. It splits the expression into tokens, parses the numbers and operators, and performs the corresponding operations.
 
 `decimalToBinary(finalResult)`: This function converts the given decimal number to its binary representation, including the fractional part up to 6 decimal places.
