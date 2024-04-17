@@ -17,8 +17,12 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start":  "node src/index.js"
+    "start": "node src/index.js"
   },
   "author": "Nirajan",
-  "license": "MIT"
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nirajan128/Calculator/issues"
+  },
+  "homepage": "https://github.com/nirajan128/Calculator#readme"
 }
