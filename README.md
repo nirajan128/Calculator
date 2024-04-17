@@ -12,17 +12,17 @@ $ npm install @nirajan_/calcula-tor
 
 After installing the package, you can use the calculator app in your project by importing the necessary files and adding them to your HTML file.
 
+```
 Import the CSS files:
 
-```
 <link rel="stylesheet" href="node_modules/calculator-app/dist/css/bootstrap.min.css">
 <link rel="stylesheet" href="node_modules/calculator-app/dist/css/style.css">
 
 Import the JavaScript file:
 
-```
-<script src="node_modules/calculator-app/dist/js/calculator.js"></script>
 
+<script src="node_modules/calculator-app/dist/js/calculator.js"></script>
+```
 Add the calculator HTML structure to your file:
 #existing HTML structure
 
@@ -40,7 +40,7 @@ Add the calculator HTML structure to your file:
     </div>
   </div>
 #</div>
-
+```
 The JavaScript code (index.js) utilizes the IDs and classes defined in the HTML to perform calculations and update the display. If you wish to modify the HTML structure or CSS styles, you can do so by editing the existing files. However, please ensure that the JavaScript code remains compatible with the updated HTML structure.
 
 If you decide to make changes to the HTML structure, you may need to update the JavaScript code accordingly to ensure proper functionality
@@ -49,7 +49,7 @@ Documentation
 -------------
 
 The calculator app consists of the following functions:
-```
+
 `calculate(fullExp)`: This function performs mathematical calculations on the given expression. It splits the expression into tokens, parses the numbers and operators, and performs the corresponding operations.
 
 `decimalToBinary(finalResult)`: This function converts the given decimal number to its binary representation, including the fractional part up to 6 decimal places.
