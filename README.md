@@ -8,7 +8,9 @@ Installation
 
 To install the calculator app, run the following command:
 
+```
 $ npm install @nirajan_/calcula-tor
+```
 
 After installing the package, you can use the calculator app in your project by importing the necessary files and adding them to your HTML file.
 
